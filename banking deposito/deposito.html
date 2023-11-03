@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            text-align: center;
+        }
+        input,textarea,button{
+            width: 100%;
+            padding: 4px;
+        }
+        button{
+            background-color: rgb(140, 208, 140);
+            color: white;
+            padding: 6px;
+            cursor: pointer;
+        }
+        #demo{
+            background-color:rgb(140, 208, 140) ;
+            padding: 10px;
+            color: white;
+            display: none;
+        }
+        #error{
+            background-color: red;
+            font-size: 12px;
+            padding: 6px;
+            display: none;
+        }
+        .erro{
+            color: red;
+            outline-color: red ;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Banking depositos</h2>
+        <form id="form-deposito" >
+            <input type="text" required placeholder="Nome completo do beneficiario" id="beneficiario">
+            <p id="error">o nome precisa ser completo</p>
+            <input type="text" required placeholder="Numero da conta" id="conta">
+            <input type="text" required placeholder="Valor" id="Vdeposito">
+            <textarea name="" id="descricao" placeholder="Descricao (Opcional)" ></textarea>
+            <button type="submit" id="deposito">Depositar</button>
+        </form>
+        <p id="demo"></p>
+    </div>
+    <script src="deposito.js"></script>
+</body>
+</html>
